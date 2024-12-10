@@ -1,3 +1,5 @@
+// ESERCIZIO 1
+
 const formName = document.getElementById("formName");
 const namesList = document.getElementById("namesList");
 const myName = document.getElementById("name");
@@ -39,3 +41,6 @@ function printName() {
     namesList.appendChild(newLi);
   }
 }
+
+// ESERCIZIO 2
+
