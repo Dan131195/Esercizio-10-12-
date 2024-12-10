@@ -44,3 +44,48 @@ function printName() {
 
 // ESERCIZIO 2
 
+
+var Timer = function(){
+    
+    this.seconds = 0;
+    this.minutes = 0;
+    this.hours = 0;
+    this.interval = null;
+
+    
+    this.start = function(){
+        this.interval = setInterval(this.update.bind(this), 1000);
+    }
+
+
+    this.stop = function(){
+        clearInterval(this.interval);
+    }
+
+    this.update = function(){
+        this.seconds++;
+
+        if(this.seconds == 60){
+            this.seconds = 0;
+            this.minutes++;
+        }
+
+       if(this.minutes == 60){
+           this.minutes = 0;
+           this.hours++
+       }
+       document.getElementById('timer').innerText = this.seconds;
+       sessionStorage.setItem()
+    }
+
+  
+    this.total_seconds = function(){
+        return ((this.minutes * 60) + this.seconds);
+    }
+};
+
+
+var clock = new Timer();
+clock.start();
+
+
