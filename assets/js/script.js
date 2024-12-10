@@ -52,11 +52,9 @@ var Timer = function(){
     this.hours = 0;
     this.interval = null;
 
-    
     this.start = function(){
         this.interval = setInterval(this.update.bind(this), 1000);
     }
-
 
     this.stop = function(){
         clearInterval(this.interval);
@@ -75,10 +73,9 @@ var Timer = function(){
            this.hours++
        }
        document.getElementById('timer').innerText = this.seconds;
-       sessionStorage.setItem()
+       sessionStorage.setItem('time', this.seconds)
     }
 
-  
     this.total_seconds = function(){
         return ((this.minutes * 60) + this.seconds);
     }
